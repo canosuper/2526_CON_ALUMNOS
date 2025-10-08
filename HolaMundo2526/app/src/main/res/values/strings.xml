@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">HolaMundo</string>
+    <string name="btLimpiar">Limpiar</string>
+    <string name="btMostrar">Mostrar</string>
+    <string name="etNombre">Nombre</string>
+    <string name="etEmail">Email</string>
+    <string name="etTelefono">Teléfono</string>
+    <string name="etEdad">Edad</string>
+    <string name="etPassword">Password</string>
+
+
+
 </resources>

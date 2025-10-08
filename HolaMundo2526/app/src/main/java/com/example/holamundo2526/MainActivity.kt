@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
@@ -11,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 //import androidx.compose.ui.semantics.dismiss
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+
 
 class MainActivity : AppCompatActivity() {
     // Declaraciones de los EditTexts y el Botón de esta pantalla
@@ -21,6 +23,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var editTextPassword: EditText
     private lateinit var botonLimpiar: Button
     private lateinit var botonMostrar: Button
+    private lateinit var botonSalir: ImageButton
+
+
 
     private val TAG = "ACSCO" // Un tag diferente para no confundir
 
@@ -40,6 +45,8 @@ class MainActivity : AppCompatActivity() {
         editTextPassword = findViewById(R.id.editTextPassword)
         botonLimpiar = findViewById(R.id.buttonLimpiar)
         botonMostrar = findViewById(R.id.buttonMostrarDatos)
+        botonSalir = findViewById(R.id.imageButtonSalir)
+
 
         // Configuración del OnClickListener para el botón Limpiar
         botonLimpiar.setOnClickListener {
@@ -53,6 +60,11 @@ class MainActivity : AppCompatActivity() {
             //mostrarFormulario()
             mostrarFormularioEnAlertDialog()
             //Toast.makeText(this, "Datos del formulario mostrados", Toast.LENGTH_LONG).show()
+        }
+        // Configuración del OnClickListener para el botón Salir
+        botonSalir.setOnClickListener {
+            Log.d(TAG, "Botón Salir presionado.")
+            finish()
         }
         Log.d(TAG, "Todos los IDs han sido encontrados.")
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

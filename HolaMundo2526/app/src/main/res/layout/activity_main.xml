@@ -10,18 +10,18 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:background="#E2D13E"
+        android:layout_width="319dp"
+        android:layout_height="52dp"
+        android:background="#F2EB9D"
         android:gravity="center"
-        android:text="FORMULARIO"
+        android:text="DATOS DE REGISTRO"
         android:textColor="#6200EA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.105" />
+        app:layout_constraintVertical_bias="0.149" />
 
     <TextView
         android:id="@+id/textView"
@@ -29,7 +29,7 @@
         android:layout_height="29dp"
         android:fontFamily="casual"
         android:gravity="center_vertical|end"
-        android:text="NOMBRE:"
+        android:text="@string/etNombre"
         android:textColor="#2A0505"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,7 +45,7 @@
         android:layout_height="29dp"
         android:fontFamily="casual"
         android:gravity="center_vertical|end"
-        android:text="EMAIL:"
+        android:text="@string/etEmail"
         android:textColor="#2A0505"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,7 +61,7 @@
         android:layout_height="29dp"
         android:fontFamily="casual"
         android:gravity="center_vertical|end"
-        android:text="TELÉFONO:"
+        android:text="@string/etTelefono"
         android:textColor="#2A0505"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -76,7 +76,7 @@
         android:layout_height="29dp"
         android:fontFamily="casual"
         android:gravity="center_vertical|end"
-        android:text="EDAD:"
+        android:text="@string/etEdad"
         android:textColor="#2A0505"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -92,7 +92,7 @@
         android:layout_height="29dp"
         android:fontFamily="casual"
         android:gravity="center_vertical|end"
-        android:text="PASSWORD:"
+        android:text="@string/etPassword"
         android:textColor="#2A0505"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -181,7 +181,7 @@
         android:id="@+id/buttonLimpiar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Limpiar"
+        android:text="@string/btLimpiar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.803"
@@ -193,13 +193,25 @@
         android:id="@+id/buttonMostrarDatos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mostrar"
+        android:text="@string/btMostrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.253"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.83" />
+
+    <ImageButton
+        android:id="@+id/imageButtonSalir"
+        android:layout_width="39dp"
+        android:layout_height="33dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.16"
+        app:srcCompat="@android:drawable/ic_delete" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

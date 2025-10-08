@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HelloWorld</string>
+    <string name="btLimpiar">Clean</string>
+    <string name="btMostrar">Show</string>
+    <string name="etNombre">Name</string>
+    <string name="etEmail">Email</string>
+    <string name="etTelefono">Phone</string>
+    <string name="etEdad">Age</string>
+    <string name="etPassword">Password</string>
+</resources>
