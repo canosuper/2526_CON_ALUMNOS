@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1B1F"
+    tools:context=".MainActivity">
+
+    <!-- CONTENEDOR DE LA IMAGEN PRINCIPAL (CON SOMBRA Y BORDES REDONDEADOS) -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewImagenGrande"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
+
+        <ImageView
+            android:id="@+id/imageViewGrande"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#1C1B1F"
+            android:scaleType="centerInside"
+            tools:src="@tools:sample/backgrounds/scenic" />
+        <!-- tools:src es solo para la vista previa, puedes borrarlo -->
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- NOMBRE DE LA IMAGEN SELECCIONADA (DEBAJO DE LA IMAGEN GRANDE) -->
+    <TextView
+        android:id="@+id/textViewNombreImagen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:textColor="#E6E1E5"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@id/cardViewImagenGrande"
+        app:layout_constraintStart_toStartOf="@id/cardViewImagenGrande"
+        app:layout_constraintTop_toBottomOf="@id/cardViewImagenGrande"
+        tools:text="Nombre de la Imagen" />
+    <!-- tools:text es para la vista previa, puedes borrarlo -->
+
+    <!-- LÍNEA SEPARADORA SUTIL -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#49454F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scrollViewMiniaturas"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- CONTENEDOR HORIZONTAL CON SCROLL PARA LAS MINIATURAS -->
+    <HorizontalScrollView
+        android:id="@+id/scrollViewMiniaturas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- CONTENEDOR DE MINIATURAS (AHORA SIN RESTRICCIONES Y CON ANCHO CORRECTO) -->
+        <LinearLayout
+            android:id="@+id/contenedorMiniaturas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="32dp">
+        <!-- ARREGLO 1: Se borraron las líneas app:layout_* de aquí -->
+
+        <!-- MINIATURA 1 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/miniatura1"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="16dp"
+                android:padding="3dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                app:strokeColor="#8A8294"
+                app:strokeWidth="2dp"
+                android:src="@drawable/t442"/>
+
+        <!-- MINIATURA 2 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/miniatura2"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="16dp"
+                android:padding="3dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                app:strokeColor="#49454F"
+                app:strokeWidth="2dp"
+                android:src="@drawable/t433" />
+
+        <!-- MINIATURA 3 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/miniatura3"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="16dp"
+                android:padding="3dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                app:strokeColor="#49454F"
+                app:strokeWidth="2dp"
+                android:src="@drawable/t4321" />
+
+        <!-- MINIATURA 4 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/miniatura4"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="16dp"
+                android:padding="3dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                app:strokeColor="#49454F"
+                app:strokeWidth="2dp"
+                android:src="@drawable/t451" />
+
+        <!-- MINIATURA 5 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/miniatura5"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="3dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                app:strokeColor="#49454F"
+                app:strokeWidth="2dp"
+                android:src="@drawable/t541" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
