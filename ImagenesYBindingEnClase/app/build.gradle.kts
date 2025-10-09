@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.holamundo2526"
+    namespace = "com.example.imagenesybindingenclase"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.holamundo2526"
+        applicationId = "com.example.imagenesybindingenclase"
         minSdk = 27
         targetSdk = 36
         versionCode = 1

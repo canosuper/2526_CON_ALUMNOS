@@ -8,4 +8,5 @@
     <string name="etTelefono">Phone</string>
     <string name="etEdad">Age</string>
     <string name="etPassword">Password</string>
+    <string name="hintNombre">Name</string>
 </resources>

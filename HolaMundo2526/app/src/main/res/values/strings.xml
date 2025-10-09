@@ -7,7 +7,7 @@
     <string name="etTelefono">Teléfono</string>
     <string name="etEdad">Edad</string>
     <string name="etPassword">Password</string>
-
+    <string name="hintNombre">Nombre</string>
 
 
 </resources>

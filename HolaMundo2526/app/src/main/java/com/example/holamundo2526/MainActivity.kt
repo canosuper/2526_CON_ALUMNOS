@@ -145,6 +145,7 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "Datos a mostrar en AlertDialog:\n$datosCompletos")
 
         // 5. Crear y mostrar el AlertDialog
+
         AlertDialog.Builder(this)
             .setTitle("Datos del Formulario")
             .setMessage(datosCompletos)
@@ -152,10 +153,8 @@ class MainActivity : AppCompatActivity() {
                 // Esta acción se ejecuta cuando el usuario presiona "Aceptar"
                 dialog.dismiss() // Cierra el diálogo
             }
-            .setNegativeButton("Cancelar") { dialog, _ ->
-                // Opcional: si quieres un botón de cancelar
-                dialog.dismiss()
-            }
+
+
             .show() // ¡Muy importante! Muestra el diálogo.
     }
 
