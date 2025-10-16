@@ -8,6 +8,7 @@
     <string name="etEdad">Edad</string>
     <string name="etPassword">Password</string>
     <string name="hintNombre">Nombre</string>
+    <string name="btEnviar">Enviar</string>
 
 
 </resources>

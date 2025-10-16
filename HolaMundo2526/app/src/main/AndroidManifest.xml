@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HolaMundo2526">
         <activity
+            android:name=".ConfirmacionDatos"
+            android:exported="false" />
+        <activity
             android:name=".GeneradoAutomaticamente"
             android:exported="false" />
         <activity

@@ -1,10 +1,13 @@
 package com.example.holamundo2526
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
@@ -21,9 +24,16 @@ class MainActivity : AppCompatActivity() {
     private lateinit var editTextTelefono: EditText
     private lateinit var editTextEdad: EditText
     private lateinit var editTextPassword: EditText
+    private lateinit var radioGroupLicencia: RadioGroup
+    private lateinit var radioButtonAcepto: RadioButton
+    private lateinit var radioButtonNoAcepto: RadioButton
+
     private lateinit var botonLimpiar: Button
     private lateinit var botonMostrar: Button
     private lateinit var botonSalir: ImageButton
+    private lateinit var botonEnviar: Button
+
+
 
 
 
@@ -43,10 +53,22 @@ class MainActivity : AppCompatActivity() {
         editTextTelefono = findViewById(R.id.editTextTelefono)
         editTextEdad = findViewById(R.id.editTextEdad)
         editTextPassword = findViewById(R.id.editTextPassword)
+        radioGroupLicencia = findViewById(R.id.radioGroupLicencia)
+        radioButtonAcepto = findViewById(R.id.radioButtonAcepto)
+        radioButtonNoAcepto = findViewById(R.id.radioButtonNoAcepto)
+
         botonLimpiar = findViewById(R.id.buttonLimpiar)
         botonMostrar = findViewById(R.id.buttonMostrarDatos)
         botonSalir = findViewById(R.id.imageButtonSalir)
+        botonEnviar = findViewById(R.id.buttonEnviar)
 
+        botonEnviar.isEnabled = false
+        radioButtonAcepto.setOnClickListener {
+            botonEnviar.isEnabled = true
+        }
+        radioButtonNoAcepto.setOnClickListener {
+            botonEnviar.isEnabled = false
+        }
 
         // Configuración del OnClickListener para el botón Limpiar
         botonLimpiar.setOnClickListener {
@@ -66,12 +88,21 @@ class MainActivity : AppCompatActivity() {
             Log.d(TAG, "Botón Salir presionado.")
             finish()
         }
+        // Dentro de tu MainActivity.kt, en el método onCreate()
+
+        // Configuración del OnClickListener para el botón Enviar
+        botonEnviar.setOnClickListener {
+            enviarDatosSencillos()
+            //enviarObjetos()
+            Log.d(TAG, "Botón Enviar presionado.")
+        }
+
         Log.d(TAG, "Todos los IDs han sido encontrados.")
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        /*ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-        }
+        }*/
     }
 
     /**
@@ -156,6 +187,50 @@ class MainActivity : AppCompatActivity() {
 
 
             .show() // ¡Muy importante! Muestra el diálogo.
+    }
+    private fun enviarDatosSencillos(){
+        Log.d(TAG, "Ejecutando enviarDatosSencillos()...")
+        // 1. Recoger los datos de los EditText
+        val nombre = editTextNombre.text.toString()
+        val email = editTextEmail.text.toString()
+        val telefono = editTextTelefono.text.toString()
+        val edad = editTextEdad.text.toString()
+        val password = editTextPassword.text.toString()
+
+        // 2. Crear un Intent para abrir ConfirmacionDatos
+        // this (contexto actual) --> ConfirmacionDatos::class.java (destino)
+        val intent = Intent(this, ConfirmacionDatos::class.java)
+
+        // 3. Añadir los datos al Intent usando "putExtra"
+        // Es una buena práctica crear claves únicas para no equivocarse.
+        intent.putExtra("EXTRA_NOMBRE", nombre)
+        intent.putExtra("EXTRA_EMAIL", email)
+        intent.putExtra("EXTRA_TELEFONO", telefono)
+        intent.putExtra("EXTRA_EDAD", edad)
+        // No enviamos la contraseña por seguridad, es una mala práctica mostrarla.
+
+        // 4. Iniciar la nueva Activity con el Intent
+        startActivity(intent)
+    }
+    private fun enviarObjetos(){
+        // 1. Recoger los datos de los EditText
+        val nombre = editTextNombre.text.toString()
+        val email = editTextEmail.text.toString()
+        val telefono = editTextTelefono.text.toString()
+        val edad = editTextEdad.text.toString()
+        //val password = editTextPassword.text.toString()
+
+        val persona = Persona(nombre, email, telefono, edad)
+
+        // 2. Crear un Intent para abrir ConfirmacionDatos
+        // this (contexto actual) --> ConfirmacionDatos::class.java (destino)
+        val intent = Intent(this, ConfirmacionDatos::class.java)
+
+        intent.putExtra("EXTRA_PERSONA", persona)
+        // No enviamos la contraseña por seguridad, es una mala práctica mostrarla.
+
+        // 4. Iniciar la nueva Activity con el Intent
+        startActivity(intent)
     }
 
 }
