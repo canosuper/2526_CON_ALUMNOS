@@ -92,8 +92,8 @@ class MainActivity : AppCompatActivity() {
 
         // Configuración del OnClickListener para el botón Enviar
         botonEnviar.setOnClickListener {
-            enviarDatosSencillos()
-            //enviarObjetos()
+            //enviarDatosSencillos()
+            enviarObjetos()
             Log.d(TAG, "Botón Enviar presionado.")
         }
 

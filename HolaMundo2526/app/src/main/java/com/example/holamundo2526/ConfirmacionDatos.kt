@@ -46,7 +46,7 @@ class ConfirmacionDatos : AppCompatActivity() {
         tvValorEdad.text = edad
 
 
-        /* Descomenta este bloque si quieres recibir el objeto de la MainActivity
+        // Descomenta este bloque si quieres recibir el objeto de la MainActivity
         // --- RECIBIR Y MOSTRAR EL OBJETO PERSONA ---
 
         // 3. Recuperar el objeto Parcelable del Intent
@@ -59,6 +59,7 @@ class ConfirmacionDatos : AppCompatActivity() {
             @Suppress("DEPRECATION")
             intent.getParcelableExtra<Persona>("EXTRA_PERSONA")
         }
+
 
         // 4. Comprobar que el objeto no es nulo y mostrar sus datos
         if (persona != null) {
@@ -75,7 +76,7 @@ class ConfirmacionDatos : AppCompatActivity() {
             tvValorTelefono.text = "-"
             tvValorEdad.text = "-"
         }
-        */
+
 
         // 6. Configurar el botón para volver a la pantalla anterior
         btnVolver.setOnClickListener {
