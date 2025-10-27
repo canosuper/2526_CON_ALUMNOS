@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnSimpleAlert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simple Alert" />
+        <Button
+            android:id="@+id/btnOkCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="OK/Cancel Alert" />
+
+        <Button
+            android:id="@+id/btnOkNoCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="OK/No/Cancel Alert" />
+
+        <Button
+            android:id="@+id/btnListAlert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="List Alert" />
+
+        <Button
+            android:id="@+id/btnSingleChoiceAlert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Single Choice Alert" />
+
+        <Button
+            android:id="@+id/btnMultiChoiceAlert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Multi Choice Alert" />
+        <Button
+            android:id="@+id/btnCustomInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Custom Input Alert"
+            android:onClick="showCustomInputAlertDialog" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
