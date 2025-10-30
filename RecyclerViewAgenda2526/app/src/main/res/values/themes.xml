@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.RecyclerViewAgenda2526" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.RecyclerViewAgenda2526" parent="Base.Theme.RecyclerViewAgenda2526" />
+    <!-- Tema para la Splash Screen -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!-- 1. Define el color de fondo de la pantalla de bienvenida --><item name="windowSplashScreenBackground">#FFFFFF</item>
+
+        <!-- 2. Define el icono que se mostrará en el centro.
+             Usa el icono de lanzamiento que ya tiene tu app. -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+
+        <!-- 3. MUY IMPORTANTE: Define el tema que se usará DESPUÉS de la splash.
+             Usa el tema que ya tiene tu app. -->
+        <item name="postSplashScreenTheme">@style/Theme.RecyclerViewAgenda2526</item>
+    </style>
+
+</resources>
