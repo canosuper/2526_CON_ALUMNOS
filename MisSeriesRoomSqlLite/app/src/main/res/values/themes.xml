@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MisSeries_Room_SqlLite_2526" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- AÑADE ESTA LÍNEA para cambiar el color primario -->
+        <item name="colorPrimary">@color/mi_azul_principal</item>
+    </style>
+
+    <style name="Theme.MisSeries_Room_SqlLite_2526" parent="Base.Theme.MisSeries_Room_SqlLite_2526" />
+</resources>
